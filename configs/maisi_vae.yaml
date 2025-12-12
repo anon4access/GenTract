@@ -1,0 +1,23 @@
+data:
+  data_dir: ""
+  cache: false
+  resolution: 1.875
+  bbox_csv: ""
+  stats_csv: ""
+
+vae:
+  pretrained: ""
+
+training:
+  model: 'maisi'
+  lr: 0.00005
+  batch_size: 2
+  n_epochs: 50
+  val_interval: 3
+
+paths:
+  base_dir: ""
+
+wandb:
+  project: ""
+  

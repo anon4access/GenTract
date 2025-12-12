@@ -1,0 +1,43 @@
+data:
+  csv_file: ""
+  cache: False
+  num_samples: 1024
+  streamline_csv: ""
+  
+training:
+  lr: 0.00005
+  batch_size: 1
+  n_epochs: 100
+  timesteps: 1000
+
+paths:
+  base_dir: ""
+
+model:
+  input_dim: 3
+  num_points: 128
+  encoder_channels: [4]
+  res_blocks: [2]
+  encoder_att_levels: [False]
+  norm_eps: 1.0e-6
+  sab_layers: 0
+  sab_heads: 0
+  model_dim: 256
+  diff_transformer_layers: 8
+  diff_num_heads: 8
+  dropout: 0.1
+  M: 28
+  use_flash_attention: False
+  model_type: "encoder"
+  cond: True
+  seed: False
+
+diffusion:
+  schedule: 'scaled_linear_beta'
+  beta_start: 0.0015
+  beta_end: 0.0205
+  num_inference_steps: 50
+  
+
+wandb:
+  project: ""
